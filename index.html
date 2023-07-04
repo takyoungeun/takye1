@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>카카오톡 버튼있는 메시지 전송하기</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+<p><strong>아래 카카오톡 아이콘을 눌러 전송하세요</strong> By. Blackcats4567</p>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
+</a>
+<script type="text/javascript">
+ Kakao.init('9022668bb766ba5040341930ae568131');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: 'ㅎㅇ',
+        description: 'ㅎㅇ',
+        imageUrl:
+          'https://search.pstatic.net/common/?src=http%3A%2F%2Fcafefiles.naver.net%2FMjAyMDAyMDdfNDQg%2FMDAxNTgxMDMxMDUwMzMy.W06IQaHhAUjojRgy5NjGvbMKKCJyeVzEwtQXnarm2zQg.E2ilAzLnGozcZbnz3b8vw0970hVxBfJoauAx9hgmcisg.PNG%2FGitHub-Mark.png&type=a340',
+        link: {
+          mobileWebUrl: 'https://heureumdesign.creatorlink.net',
+          webUrl: 'https://heureumdesign.creatorlink.net',
+        },
+      },
+      social: {
+        likeCount: 2, //99999가 최대입니다
+        commentCount: 2, //99999가 최대입니다
+        sharedCount: 2, //99999가 최대입니다
+      },
+      buttons: [
+        {
+          title: '자세히보기',
+          link: {
+            mobileWebUrl: 'https://heureumdesign.creatorlink.net',
+            webUrl: 'https://heureumdesign.creatorlink.net',
+          },
+        },
+      ],
+    })
+  }
+</script>
+<!-- www.blackcats4567.com -->
+<!-- 이미지/버튼 클릭 시 주소는 Kakao Developers의 애플리케이션 > 플랫폼 > Web에 넣어야 클릭했을때 성공적으로 표시됩니다 -->
+  </body>
+</html>
